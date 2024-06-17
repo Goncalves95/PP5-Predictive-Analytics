@@ -8,7 +8,7 @@ from src.machine_learning.evaluate_regression import (
     regression_evaluation_plots
 )
 
-def page_predict_price_ml_body():
+def predict_price():
 
     # Load regression pipeline files
     vsn = 'v1'
