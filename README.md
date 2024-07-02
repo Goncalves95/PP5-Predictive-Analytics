@@ -2,52 +2,23 @@
  
 ![Heritage Housing Ames](https://lh3.googleusercontent.com/p/AF1QipNKRtVDRmvx3OtNnix6GgYkVe6a-eD_0qM1x9dI=s1360-w1360-h1020)
 
-## Template Instructions
+## Table of content
 
-Welcome,
-
-This is the Code Institute student template for the Heritage Housing project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-2. Log into the cloud-based IDE with your GitHub account.
-
-3. On your Dashboard, click on the Create button
-
-4. Paste in the URL you copied from GitHub earlier
-
-5. Click Create
-
-6. Wait for the workspace to open. This can take a few minutes.
-
-7. Open a new terminal and `pip3 install -r requirements.txt`
-
-11. Open the jupyter_notebooks directory and click on the notebook you want to open.
-
-12. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.8.18 as it inherits from the workspace so it will be Python-3.8.18 as installed by our template. To confirm this you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In your Cloud IDE, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
 
 ## Dataset Content
 
-* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-* The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
+The primary purpose of this project is to provide a tool that enables users to predict the potential sale price of a property in Ames, Iowa, by providing detailed and relevant information about the" real estate in question.
+Specifically, a client has requested this application to estimate the sale price for several inherited properties in Ames, Iowa. The client has supplied a publicly available dataset which is used to train the machine learning model and predict local real estate sale prices.
+
+**Project Terminology**
+* A **client** is a person who uses this service or product.
+* The **sale price** is the estimated value of a home as it might be realized in a typical and unencumbered real estate transaction.
+* The home whose value is being estimated may be referred to as **property, real estate, house, or home**.
+* The **features** or **attributes** of a home are the characteristics used to describe the property.
+
+**Project Dataset**
+* The dataset can be accessed at [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data), where it is hosted by Code Institute.\n
+* The dataset represents a record of approximately 1500 real estate sales in Ames, Iowa. Each record contains 23 features detailing the house profile, such as Floor Area, Basement, Garage, Kitchen, Lot, Wood Deck, and Year Built. It also includes the Sale Price. The features are extensive.
 
 |Variable|Meaning|Units|
 |:----|:----|:----|
@@ -78,12 +49,14 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ## Business Requirements
 
-As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
+The project has three main business requirements:
 
-Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
+1. The client wants to understand the relationship between a property's attributes/features and its sale price.
+Therefore, the client expects data visualizations that illustrate the correlation between these variables and the sale prices.
 
-* 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
-* 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
+2. The client is interested in predicting the potential sale prices for properties in Ames, Iowa, with a specific focus on estimating the value of the properties she has inherited.
+
+3. The client would like to have easy access to the results through an online application.
 
 ## Hypothesis and how to validate?
 
@@ -104,15 +77,20 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Unfixed Bugs
 
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+The app does not currently contain any unfixed bugs.
+
+## PEP8 Compliance Testing
+
+All python files where passed through the [CI Python Linter](https://pep8ci.herokuapp.com/). 
+Those files incuded the `app_pages` files. A few small errors were fixed, such as long lines or trailing white spaces.
 
 ## Deployment
 
 ### Heroku
 
-* The App live link is: <https://YOUR_APP_NAME.herokuapp.com/>
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+- The App live link is: <https://heritage-housing-uriem-381968c86628.herokuapp.com>
+- Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+- The project was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and create an App
 2. At the Deploy tab, select GitHub as the deployment method.
@@ -121,27 +99,71 @@ Although your friend has an excellent understanding of property prices in her ow
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
-## Main Data Analysis and Machine Learning Libraries
+## Technologies
 
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+### Development and Deployment
+
+- [GitHub](https://github.com/) was used to create the project repository, story project files and record commits.
+- [Code Anywhere](https://codeanywhere.com/) was used as the development environment.
+- [Streamlit](https://streamlit.io/) was used to develop the online app interface.
+- [Jupyter Notebooks](https://jupyter.org/) were used to analyse and engineer the data, and develop and evaluate the model pipeline.
+- [Heroku](https://www.heroku.com/) was used to deploy the project.
+- [Kaggle](https://www.kaggle.com/) was used to access the dataset
+
+
+### Main Data Analysis and Machine Learning
+
+- [NumPy](https://numpy.org/) was used for mathematical operations for examples determining means, modes, and standard deviations.
+- [Feature Engine](https://feature-engine.trainindata.com/en/latest/index.html) was used for various data cleaning and preparation tasks.
+- [SciKit Learn](https://scikit-learn.org/stable/) was used for many machine learning tasks.
+- [Pandas](https://pandas.pydata.org/) was used for reading and writing data files, inspecting, creating and manipulating series and dataframes.
+- [ydata_profiling](https://ydata-profiling.ydata.ai/docs/master/index.html) was used to create an extensive Profile Report of the dataset.
+- [PPScore](https://pypi.org/project/ppscore/) was used to determine the predictive power score of the data features.
+- [MatPlotLib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/) were used for constructing plots to visualize the data analysis.
+
+numpy>=1.19.2
+pandas==1.4.2
+matplotlib==3.3.1
+seaborn==0.11.0
+ydata-profiling==4.4.0
+plotly==4.12.0
+ppscore==1.2.0
+
+streamlit==0.85.0
+
+feature-engine==1.0.2
+imbalanced-learn==0.8.0
+scikit-learn==0.24.2
+xgboost==1.2.1
+yellowbrick==1.3
+Jinja2==3.1.1
+MarkupSafe==2.0.1
+protobuf==3.20
+ipywidgets==8.0.2
+altair<5
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
+### Sources of code
 
-### Content
-
-* The text for the Home page was taken from Wikipedia Article A
-* Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-* The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The CI Churnometer Walkthrough Project and the CI course content was used to source various functions and classes in the development process.
+- The CI Churnometer Walkthrough Project was also the source of the Steamlit pages which were then modified and adapted to the app deployed in this project.
 
 ### Media
 
-* The photos used on the home and sign-up page are from This Open Source site
-* The images used for the gallery page were taken from this other open-source site
+- The image of main street Ames is from [Wikipedia](https://commons.wikimedia.org/wiki/File:Ames_Iowa_Main_Street_%28bannerportada_esvoy%29.jpg)
 
-## Acknowledgements (optional)
+- The images of Iowa State University was taken from [Niche.com](https://www.niche.com/colleges/iowa-state-university/)
 
+## Acknowledgements
 
-* In case you would like to thank the people that provided support through this project.
+Thanks and appreciation go to the following sources and people:
+
+- Several past projects provided valuable additional information on how to complete a successful project:
+  - Heritage Housing Issues project by T. Hullis [Link](https://github.com/t-hullis/milestone-project-heritage-housing-issues)
+  - Heritage Housing Issues project by Amare Teklay Hailu [Link](https://github.com/Amareteklay/heritage-housing-issues/blob/main/README.md)
+  - Heritage Housing Issues project by Farid Benachenhou [Link](https://github.com/faridjos/milestone-project-heritage-housing-issues)
+- StackOverflow helped resolve several issues through out the project.
+- As always a big thank you to my husband, Railson Gonçalves.
+
+**Developed by: Fernando Gonçalves**
