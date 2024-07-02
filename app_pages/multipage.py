@@ -1,7 +1,9 @@
 import streamlit as st
 import streamlit as st
 
-
+[theme]
+backgroundColor = "#F0F0F0"
+font = "Helvetica Neue"
 # Class to generate multiple Streamlit pages using an object oriented approach
 class MultiPage:
 

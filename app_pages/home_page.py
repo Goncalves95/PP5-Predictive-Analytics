@@ -1,12 +1,13 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import pandas as pd
 
 
 def home_page_body():
     """
     Displays contents of the project home page
     """
-    
+
     image_main = plt.imread(f"images/ames_city.jpeg")
     image_isu = plt.imread(f"images/ames_university_city.jpeg")
     
