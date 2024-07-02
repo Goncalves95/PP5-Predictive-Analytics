@@ -3,12 +3,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date
-from src.data_management import (
+from src.data import (
     load_house_prices_data,
     load_pkl_file,
     load_inherited_house_data)
-from src.machine_learning.evaluate_regression import regression_performance
-from src.machine_learning.predictive_analysis_ui import predict_price
+from src.ml.evaluate_regression import regression_performance
+from src.ml.predictive import predict_price
 
 
 def page_price_predictor_body():
