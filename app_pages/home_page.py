@@ -72,10 +72,6 @@ def home_page_body():
         f" about the developer, visit her"
         f" [MyPortfolio](https://www.iamfernando.com).")
     
-    #Map from the principal park on the city Ames
-    d = {'lat': [42.035724], 'lon': [93.600002]}
-    df_ames = pd.DataFrame(data=d)
-    st.map(data=df_ames, zoom=15)
 
     st.image(image_isu, caption='Ames, Iowa, USA.')
 
