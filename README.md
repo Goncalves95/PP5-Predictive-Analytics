@@ -139,7 +139,8 @@ Those files incuded the `app_pages` files. A few small errors were fixed, such a
 Thanks and appreciation go to the following sources and people:
 
 - Several past projects provided valuable additional information on how to complete a successful project:
-- Setup of widgest with t-hullis(https://github.com/t-hullis/milestone-project-heritage-housing-issues/tree/main)
+- Setup of widgest learned with t-hullis[Link](https://github.com/t-hullis/milestone-project-heritage-housing-issues/tree/main)
+- Predictive Power Score learned with Paul van der Laken [Link](https://github.com/paulvanderlaken/ppsr)
   - Heritage Housing Issues project by T. Hullis [Link](https://github.com/t-hullis/milestone-project-heritage-housing-issues)
   - Heritage Housing Issues project by Amare Teklay Hailu [Link](https://github.com/Amareteklay/heritage-housing-issues/blob/main/README.md)
   - Heritage Housing Issues project by Farid Benachenhou [Link](https://github.com/faridjos/milestone-project-heritage-housing-issues)
