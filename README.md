@@ -72,8 +72,162 @@ Therefore, the client expects data visualizations that illustrate the correlatio
 
 ## Dashboard Design
 
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+### Home Page
+    Content:
+
+    Image Display
+
+    Purpose: Visual representation of Ames City and Iowa State University.
+    Details: Display images (ames_city.jpeg and ames_university_city.jpeg) using st.image.
+    Project Summary
+
+    Purpose: Provide an overview of the project's goals and dataset information.
+    Details:
+    Uses st.write and st.info to present project purpose, motivation, terminology, and dataset details.
+    Describes the dataset sourced from Kaggle, containing features related to real estate in Ames, Iowa.
+    Provides links to the Kaggle dataset and GitHub README file for more information.
+    Business Requirements
+
+    Purpose: Outline the primary business requirements of the project.
+    Details:
+    Presented with st.success to highlight three main requirements:
+    Understanding the relationship between property features and sale price.
+    Predicting sale prices for properties in Ames, Iowa, especially inherited ones.
+    Providing easy access to results via an online application.
+    Additional Information
+
+    Purpose: Offer access to further project documentation and developer information.
+    Details:
+    Provides links to the GitHub README file for comprehensive project details.
+    Includes a link to the developer's portfolio for more about the developer, Fernando Gonçalves.
+    Widgets and Interaction:
+
+    This page primarily consists of static content displayed using Streamlit's st.image, st.write, and st.info functions.
+    Links provided enable users to access external resources for deeper understanding and engagement.
+    Future Updates:
+
+    Consider integrating interactive elements such as buttons or dropdowns for enhanced user interaction.
+    Update visual content based on user feedback or additional project developments.
+
+### Predict Price Page
+    Content:
+
+    ML Pipeline Summary
+
+    Purpose: Overview of the machine learning pipeline used to predict property sale prices.
+    Details:
+    Utilizes st.success to summarize the training process:
+    Model trained on 23 initial features with 'SalePrice' as the target.
+    Two features dropped due to significant missing data; remaining data underwent feature engineering.
+    Hyperparameter tuning resulted in achieving an R2 Score of 0.8 or higher on both train and test sets.
+    Highlights four crucial features for predictive power.
+    ML Pipeline Details
+
+    Purpose: Display details of the trained machine learning pipeline.
+    Details:
+    Uses st.code to showcase the Python code of the regression pipeline (sale_price_pipe).
+    Provides transparency into the pipeline's configuration and steps.
+    Feature Importance
+
+    Purpose: Showcases the importance of features used in the model.
+    Details:
+    Displays the list of features (X_train.columns.to_list()) and their importance through an image (sale_price_feat_importance).
+    Specifies the top four features the model was ultimately trained on, emphasizing their significance.
+    Pipeline Performance
+
+    Purpose: Evaluates and visualizes the performance of the trained pipeline.
+    Details:
+    Utilizes regression_performance to display performance metrics on both training and test sets.
+    Includes a performance plot (regression_evaluation_plots) to visualize predicted versus actual sale prices.
+    Widgets and Interaction:
+
+    This page primarily presents static content with summary information, pipeline code, feature importance visuals, and performance metrics.
+    Visual plots provide interactive elements to view performance trends and model predictions.
+    Future Updates:
+
+    Consider integrating more interactive elements such as sliders or dropdowns for users to explore different aspects of model performance.
+    Enhance visualization techniques based on user feedback or further developments in data analysis techniques.
+
+### Property Sale Price Analysis Page
+    Content:
+
+    Project Background and Client Expectations
+
+    Purpose: Provides an overview of the project goals and client expectations related to understanding property attributes' correlation with sale prices.
+    Details:
+    Uses st.success to summarize the client's interest in visualizing the correlation between property features and sale prices.
+    Highlights Business Requirement 1: Visualization of correlated variables against sale prices.
+    Data Inspection
+
+    Purpose: Allows users to inspect the dataset.
+    Details:
+    Uses st.checkbox to optionally display the dataset's basic information (number of rows, columns, and first 10 rows).
+    Provides information on categorical features related to basement exposure, finish type, garage finish, kitchen quality, overall condition, and overall quality.
+    Correlation Study
+
+    Purpose: Conducts a correlation study to analyze relationships between variables and sale prices.
+    Details:
+    Uses heatmaps to display Pearson and Spearman correlation results.
+    Highlights the most correlated features (OverallQual, GrLivArea, GarageArea, TotalBsmtSF, YearBuilt, 1stFlrSF) with Sale Price through bar plots.
+    Provides scatterplots to visually depict the correlation of these variables with Sale Price.
+    Predictive Power Score (PPS)
+
+    Purpose: Utilizes PPS to identify predictive relationships between variables.
+    Details:
+    Displays a heatmap of PPS scores, indicating linear or non-linear relationships between variables and Sale Price.
+    Shows a bar plot of top predictive scores for Sale Price.
+    Widgets and Interaction:
+
+    Checkbox: Allows users to toggle visibility of dataset information and correlation plots.
+    Histograms and Scatterplots: Visualize correlations between variables (OverallQual, GrLivArea, etc.) and Sale Price, with histograms showing data distribution and scatterplots highlighting trends.
+    Future Updates:
+
+    Consider enhancing user interaction with more dynamic features like sliders for threshold adjustments in correlation heatmaps.
+    Incorporate tooltips or hover-over descriptions in plots to provide detailed insights.
+    Explore interactive features to filter data based on specific criteria or variable selections dynamically.
+
+### Price Predictor Interface Page
+    The Price Predictor Interface page in your Streamlit dashboard is designed to predict the potential sale prices of properties in Ames, Iowa, focusing specifically on properties inherited by the client. Here’s a breakdown of the page content and functionality:
+
+    Content and Features:
+
+    Project Background and Client Expectations
+
+    Purpose: Provides an overview of the client's interest in predicting sale prices for inherited properties.
+    Details:
+    Uses st.success to highlight Business Requirement 2: Predicting sale prices for inherited properties.
+    Provides information on the key features used in prediction and their importance as determined by the machine learning model.
+    Mentions the alignment of these features with the initially identified correlated variables from the data analysis.
+    Input Features for Prediction
+
+    Purpose: Allows users (the client) to input specific property features for prediction.
+    Details:
+    Uses draw_inputs_widgets function to generate input widgets for four key features: Overall Quality, Total Basement Area, 2nd Floor Area, and Garage Area.
+    Each widget is designed as a number input field with defined minimum and maximum values, step sizes, and default values based on the dataset statistics.
+    Prediction Execution
+
+    Purpose: Executes the prediction based on user-input features.
+    Details:
+    Provides a button (Run Predictive Analysis) to trigger the prediction process using the machine learning pipeline (sale_price_pipe).
+    Upon button press, calls the predict_sale_price function to predict the sale price using the provided features.
+    Displays the predicted sale prices or relevant insights based on the prediction results.
+    Inherited Properties Prediction
+
+    Purpose: Predicts the total value of inherited properties.
+    Details:
+    Displays the features of inherited properties fetched using load_inherited_house_data() and filtered to match the features used in prediction (sale_price_features).
+    Provides a button (Run Prediction) to initiate the prediction process for inherited properties.
+    Computes the total estimated value based on the predicted sale prices of inherited properties and formats the output as a monetary value.
+    Widgets and Interaction:
+
+    Number Input Fields: Allow users to input values for Overall Quality, Total Basement Area, 2nd Floor Area, and Garage Area.
+    Buttons: Trigger actions such as running predictive analysis and displaying prediction results.
+    Data Loading: Utilizes functions from src.data to load datasets necessary for prediction and analysis.
+    Future Enhancements:
+
+    Consider incorporating error handling for invalid inputs or edge cases.
+    Implement interactive visualizations or charts to complement prediction results.
+    Provide additional insights or recommendations based on predicted sale prices.
 
 ## Unfixed Bugs
 
