@@ -60,15 +60,52 @@ Therefore, the client expects data visualizations that illustrate the correlatio
 
 ## Hypothesis and how to validate?
 
-* List here your project hypothesis(es) and how you envision validating it (them).
+1. Hypothesis 1: The overall quality (OverallQual) of a property significantly impacts its sale price in Ames, Iowa.
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+Validation Approach:
 
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+    * Feature Importance: Utilize feature importance analysis from machine learning models (e.g., Random Forest Regression) to quantify the impact of OverallQual on predicting sale prices.
+    * Correlation Analysis: Conduct correlation studies (Pearson, Spearman) to validate the strength and direction of the relationship between OverallQual and Sale Price.
+    * Visualization: Create scatterplots and regression plots to visually inspect how changes in OverallQual correspond to changes in Sale Price.
+2. Hypothesis 2: Properties with larger ground-level living areas (GrLivArea) tend to command higher sale prices in Ames, Iowa.
+
+Validation Approach:
+
+    * Correlation Analysis: Use statistical measures (Pearson, Spearman) to assess the correlation between GrLivArea and Sale Price.
+    * Visual Examination: Plot histograms and scatterplots to visualize the distribution and relationship between GrLivArea and Sale Price.
+    * Model Insights: Extract insights from regression model coefficients and feature importance scores to understand GrLivArea's impact on predicting Sale Price.
+
+3. Hypothesis 3: The age of a property (YearBuilt) influences its sale price, with newer constructions generally commanding higher prices in Ames, Iowa.
+
+Validation Approach:
+
+    * Trend Analysis: Analyze trends over time by plotting Sale Price against YearBuilt.
+    * Descriptive Statistics: Calculate summary statistics and trends to identify any patterns or anomalies related to property age and sale prices.
+    * Machine Learning Model Analysis: Use regression models to quantify the predictive power of YearBuilt on Sale Price, considering potential nonlinear relationships.
 
 ## ML Business Case
 
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+* The project addresses the need to predict property sale prices for inherited properties in Ames, Iowa, leveraging machine learning to support informed decision-making and financial planning.
+
+    Objectives:
+
+    Prediction Task: Develop a regression model to estimate sale prices based on property features like overall quality, basement area, second floor area, and garage area.
+    Client Needs: Enable the client to understand and evaluate the financial implications of inherited properties for potential sale.
+    Methodology:
+
+    1. Data Preparation: Cleaned and preprocessed a dataset of Ames real estate transactions, handling missing values and engineering relevant features.
+
+    2. Model Selection: Implemented regression models including Linear Regression and Random Forest Regression, optimizing for accuracy and interpretability.
+
+    3. Model Evaluation: Evaluated models using metrics such as R-squared, Mean Squared Error (MSE), and Root Mean Squared Error (RMSE), ensuring robust performance.
+
+    4. Deployment: Developed a user-friendly interface using Streamlit for the client to input property features and obtain predicted sale prices in real-time.
+
+    Business Value:
+
+    Informed Decisions: Provides accurate predictions to support strategic decisions on managing and selling inherited properties.
+    Financial Planning: Facilitates financial planning by estimating property values and potential sale proceeds.
+    Operational Efficiency: Enhances efficiency by leveraging data-driven insights to streamline decision-making processes.
 
 ## Dashboard Design
 
