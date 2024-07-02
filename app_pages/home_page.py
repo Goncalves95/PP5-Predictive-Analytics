@@ -1,12 +1,15 @@
 import streamlit as st
 import matplotlib.pyplot as plt
-import pandas as pd
 
 
 def home_page_body():
-
+    """
+    Displays contents of the project home page
+    """
+    
     image_main = plt.imread(f"images/ames_city.jpeg")
     image_isu = plt.imread(f"images/ames_university_city.jpeg")
+    
     st.image(image_main, caption='Ames City')
 
     st.write("### Project Summary")
@@ -42,8 +45,7 @@ def home_page_body():
         f" Kitchen, Lot,"
         f" Porch, Wood Deck, and Year Built. It also includes the Sale Price."
         f" The features are extensive, so please visit the site for more"
-        f" information."
-    )
+        f" information.")
 
     # copied from README file - "Business Requirements" section
     st.success(
@@ -57,8 +59,7 @@ def home_page_body():
         f" for properties in Ames, Iowa, with a specific focus on estimating the"
         f" value of the properties she has inherited.\n"
         f"3. The client would like to have easy access to the results through"
-        f" an online application."
-    )
+        f" an online application.")
 
     # Link to README file, so the users can have access to full
     # project documentation
@@ -68,8 +69,7 @@ def home_page_body():
         f" file on the project's GitHub page.\n"
         f"* This project was developed by Fernando Gonçalves. For study purposes"
         f" about the developer, visit her"
-        f" [MyPortfolio](https://www.iamfernando.com)."
-    )
+        f" [MyPortfolio](https://www.iamfernando.com).")
     
     #Map from the principal park on the city Ames
     d = {'lat': [42.035724], 'lon': [93.600002]}
@@ -77,7 +77,6 @@ def home_page_body():
     st.map(data=df_ames, zoom=15)
 
     st.image(image_isu, caption='Ames, Iowa, USA.')
-
 
 
 #############      #############      #############

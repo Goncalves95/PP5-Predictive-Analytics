@@ -8,3 +8,5 @@ app = MultiPage(app_name="Heritage Housing Ames, USA")  # Create an instance of 
 
 # Add your app pages here using .add_page()
 app.add_page("Project Summary", home_page_body)
+
+app.run()  # Run the app
