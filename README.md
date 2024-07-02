@@ -121,27 +121,6 @@ Those files incuded the `app_pages` files. A few small errors were fixed, such a
 - [PPScore](https://pypi.org/project/ppscore/) was used to determine the predictive power score of the data features.
 - [MatPlotLib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/) were used for constructing plots to visualize the data analysis.
 
-numpy>=1.19.2
-pandas==1.4.2
-matplotlib==3.3.1
-seaborn==0.11.0
-ydata-profiling==4.4.0
-plotly==4.12.0
-ppscore==1.2.0
-
-streamlit==0.85.0
-
-feature-engine==1.0.2
-imbalanced-learn==0.8.0
-scikit-learn==0.24.2
-xgboost==1.2.1
-yellowbrick==1.3
-Jinja2==3.1.1
-MarkupSafe==2.0.1
-protobuf==3.20
-ipywidgets==8.0.2
-altair<5
-
 ## Credits
 
 ### Sources of code
