@@ -13,36 +13,31 @@ def page_predict_price_ml_body():
     # load regression pipeline files
     vsn = 'v2'
     sale_price_pipe = load_pkl_file(
-        f"outputs/ml_pipeline/predict_sale_price/{vsn}/regression_pipeline.pkl"
+        f"outputs/ml_pipeline/predict_price/{vsn}/regression_pipeline.pkl"
     )
     sale_price_feat_importance = plt.imread(
-        f"outputs/ml_pipeline/predict_sale_price/{vsn}/features_importance.png"
+        f"outputs/ml_pipeline/predict_price/{vsn}/features_importance.png"
     )
     X_train = pd.read_csv(
-        f"outputs/ml_pipeline/predict_sale_price/{vsn}/X_train.csv")
+        f"outputs/ml_pipeline/predict_price/{vsn}/X_train.csv")
     X_test = pd.read_csv(
-        f"outputs/ml_pipeline/predict_sale_price/{vsn}/X_test.csv")
+        f"outputs/ml_pipeline/predict_price/{vsn}/X_test.csv")
     y_train = pd.read_csv(
-        f"outputs/ml_pipeline/predict_sale_price/{vsn}/y_train.csv").squeeze()
+        f"outputs/ml_pipeline/predict_price/{vsn}/y_train.csv").squeeze()
     y_test = pd.read_csv(
-        f"outputs/ml_pipeline/predict_sale_price/{vsn}/y_test.csv").squeeze()
+        f"outputs/ml_pipeline/predict_price/{vsn}/y_test.csv").squeeze()
 
     st.write("### ML Pipeline: Predict Property Sale Price")
     # display pipeline training summary conclusions
     st.success(
-        f" A Regressor model was trained to predict the sale price of"
-        f" properties in Ames, Iowa. "
-        f" The initial data set contained 23 features and 'SalePrice' as "
-        f" the target."
-        f" Two features were dropped due to around 90% of data points missing."
-        f" Feature engineering was carried out on the remaining data. "
-        f" The model was then tuned using a hyperparameter search and was "
-        f" found to "
-        f" **meet the project requirement** with an R2 Score of 0.8 or "
-        f" better on "
-        f" both train and test sets. The model identified the four most "
-        f" important features necessary to acchieve the best predictive "
-        f" power. ")
+        f"A Regressor model was trained to predict property sale prices in Ames, Iowa. "
+        f"The dataset initially had 23 features with 'SalePrice' as the target. "
+        f"After dropping two features with significant missing data, "
+        f"feature engineering was applied to the remaining data. "
+        f"The model was tuned via hyperparameter search, achieving an R2 Score of 0.8 or better "
+        f"on both train and test sets. "
+        f"Four crucial features were identified for optimal predictive power."
+)
     st.write("---")
 
     # show pipeline steps
@@ -75,3 +70,16 @@ def page_predict_price_ml_body():
                                 X_test=X_test,
                                 y_test=y_test, pipeline=sale_price_pipe,
                                 alpha_scatter=0.5)
+
+
+
+#############      #############      #############
+#############      #############      #############
+###                ###                ###       ###
+###                ###                ###       ###
+########           ########           #############
+########           ########           #############
+###                ###                ###       ###           #########
+###                ###                ###        ###          ###   ###
+###                #############      ###         ###         ###   ###
+###                #############      ###         ###         #########
