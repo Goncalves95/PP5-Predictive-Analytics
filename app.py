@@ -2,7 +2,7 @@ import streamlit as st
 from app_pages.multipage import MultiPage
 
 # load pages scripts
-from app_pages.page_summary import home_page_body
+from app_pages.home_page import home_page_body
 from app_pages.page_cells_visualizer import page_cells_visualizer_body
 from app_pages.page_malaria_detector import page_malaria_detector_body
 from app_pages.page_project_hypothesis import page_project_hypothesis_body
