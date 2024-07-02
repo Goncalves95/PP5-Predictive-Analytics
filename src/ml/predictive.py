@@ -3,7 +3,7 @@ import streamlit as st
 # Function predicts house prices using the regression pipeline
 
 
-def predict_sale_price(X_live, property_features, sale_price_pipeline):
+def predict_price(X_live, property_features, sale_price_pipeline):
 
     # from live data, subset features related to this pipeline
     # the features are filtered using the list of features from the pipeline
