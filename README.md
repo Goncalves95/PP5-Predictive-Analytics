@@ -111,7 +111,7 @@ Those files incuded the `app_pages` files. A few small errors were fixed, such a
 - [Kaggle](https://www.kaggle.com/) was used to access the dataset
 
 
-### Main Data Analysis and Machine Learning
+### Data Analysis and Machine Learning
 
 - [NumPy](https://numpy.org/) was used for mathematical operations for examples determining means, modes, and standard deviations.
 - [Feature Engine](https://feature-engine.trainindata.com/en/latest/index.html) was used for various data cleaning and preparation tasks.
