@@ -14,7 +14,7 @@ from src.ml.predictive import predict_price
 def page_price_predictor_body():
 
     # load predict sale price files
-    vsn = 'v2'
+    vsn = 'v1'
     sale_price_pipe = load_pkl_file(
         f"outputs/ml_pipeline/predict_price/{vsn}/regression_pipeline.pkl"
     )
