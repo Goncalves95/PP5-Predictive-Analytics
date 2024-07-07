@@ -6,10 +6,8 @@ class MultiPage:
         self.app_name = app_name
 
         st.set_page_config(
-            page_title="My App",
-            page_icon=":smiley:",
-            layout="wide"
-        )
+            page_title=self.app_name,
+            page_icon="🏘️") # Icon source: https://twemoji.maxcdn.com/2/test/preview.html
 
         # Set the background color
         st.write("<style>body { background-color: #262730; }</style>", unsafe_allow_html=True)

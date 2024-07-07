@@ -13,78 +13,35 @@ def home_page_body():
     
     st.image(image_main, caption='Ames City')
 
-    st.write("<h2 style='font-size: 24px; font-weight: bold; color: #66D9EF;'>Project Summary</h2>")
-
-    st.markdown("""
-    <style>
-    body {
-        background-color: #262730;
-        font-family: Helvetica;
-    }
-   .paragraph {
-        font-size: 18px;
-        line-height: 1.5;
-        color: #FFFFFF; /* white text */
-    }
-   .header {
-        font-size: 24px;
-        font-weight: bold;
-        color: #66D9EF; /* blue-green text */
-    }
-   .info {
-        font-size: 16px;
-        font-style: italic;
-        color: #AAAAAA; /* gray text */
-    }
-    </style>
-    """, unsafe_allow_html=True)
+    st.write("Project Summary")
 
     # text based on README file - "Dataset Content" section
     st.info(
-        f"**Project Purpose and Motivation**\n\n"
-        f"The primary purpose of this project is to provide a tool that enables"
-        f" users to predict the potential sale price of a property in"
-        f" Ames, Iowa, by providing detailed and relevant information about the"
-        f" real estate in question.\n\n"
-        f"Specifically, a client has requested this application to"
-        f" estimate the sale price for several inherited properties in"
-        f" Ames, Iowa. The client has supplied a publicly available dataset"
-        f" which is used to train the machine learning model and"
-        f" predict local real estate sale prices.\n\n"
-        f"**Project Terminology**\n"
-        f"* A **client** is a person who uses this service or product.\n"
-        f"* The **sale price** is the estimated value of a home as it"
-        f" might be realized in a typical and unencumbered real estate"
-        f" transaction.\n"
-        f"* The home whose value is being estimated may be referred to as"
-        f" **property, real estate, house, or home**.\n"
-        f"* The **features** or **attributes** of a home are the characteristics"
-        f" used to describe the property.\n\n"
-        f"**Project Dataset**\n"
-        f"* The dataset can be accessed at"
-        f" [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data),"
-        f" where it is hosted by Code Institute.\n"
-        f"* The dataset represents a record of approximately 1500 real estate"
-        f" sales in Ames, Iowa. Each record contains 23 features detailing"
-        f" the house profile, such as Floor Area, Basement, Garage,"
-        f" Kitchen, Lot,"
-        f" Porch, Wood Deck, and Year Built. It also includes the Sale Price."
-        f" The features are extensive, so please visit the site for more"
-        f" information.")
+        f"**Welcome to Ames Housing Price Predictor!**\n\n"
+        f"This project aims to provide a tool that enables users to predict the potential sale price of a property in Ames, Iowa.\n\n"
+        f"Our client has requested this application to estimate the sale price for several inherited properties in Ames, Iowa.\n\n"
+        f"**Key Terms**\n"
+        f"* **Client**: A person who uses this service or product.\n"
+        f"* **Sale Price**: The estimated value of a home as it might be realized in a typical and unencumbered real estate transaction.\n"
+        f"* **Property**: The home whose value is being estimated.\n"
+        f"* **Features**: The characteristics used to describe the property.\n\n"
+        f"**Dataset**\n"
+        f"* The dataset can be accessed at [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).\n"
+        f"* The dataset represents a record of approximately 1500 real estate sales in Ames, Iowa.",
+        icon="ℹ️",  # change the icon
+        color="#33CC33"  # change the color to green
+    )
 
     # copied from README file - "Business Requirements" section
     st.success(
-        f"**Business Requirements**\n\n"
-        f"The project has three main business requirements:\n"
-        f"1. The client wants to understand the relationship"
-        f" between a property's attributes/features and its sale price."
-        f" Therefore, the client expects data visualizations that illustrate"
-        f" the correlation between these variables and the sale prices.\n"
-        f"2. The client is interested in predicting the potential sale prices"
-        f" for properties in Ames, Iowa, with a specific focus on estimating the"
-        f" value of the properties she has inherited.\n"
-        f"3. The client would like to have easy access to the results through"
-        f" an online application.")
+        f"**Project Objectives**\n\n"
+        f"Our project has three main objectives:\n"
+        f"1. To understand the relationship between a property's attributes and its sale price.\n"
+        f"2. To predict the potential sale prices for properties in Ames, Iowa.\n"
+        f"3. To provide easy access to the results through an online application.",
+        icon="✔️",  # change the icon
+        color="#0099FF"  # change the color to blue
+    )
 
     # Link to README file, so the users can have access to full
     # project documentation
