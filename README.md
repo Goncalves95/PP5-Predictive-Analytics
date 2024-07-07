@@ -107,6 +107,20 @@ Validation Approach:
     Financial Planning: Facilitates financial planning by estimating property values and potential sale proceeds.
     Operational Efficiency: Enhances efficiency by leveraging data-driven insights to streamline decision-making processes.
 
+## User Storys
+
+* SOME USER STORYS:
+
+**User Story 1** As a client, I want to be able to input the features of a property (e.g. Overall Quality, Total Basement Area, 2nd Floor Area, Garage Area) so that I can get an estimated sale price for the property.
+
+**User Story 2** As a client, I want to visualize the correlation between different property features and sale prices so that I can better understand which features have the most impact on sale prices.
+
+**User Story 3** As a client, I want to be able to predict the total value of my inherited properties in Ames, Iowa so that I can make informed decisions about selling or holding onto them.
+
+**User Story 4** As a client, I want to have access to an online application that allows me to easily input property features and get estimated sale prices so that I can quickly and easily evaluate different properties.
+
+**User Story 5** As a client, I want to be able to view a summary of the machine learning pipeline used to predict sale prices so that I can understand the methodology behind the predictions and have confidence in the results.
+
 ## Dashboard Design
 
 ### Home Page
