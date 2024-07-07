@@ -27,8 +27,7 @@ def home_page_body():
         f"* **Features**: The characteristics used to describe the property.\n\n"
         f"**Dataset**\n"
         f"* The dataset can be accessed at [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).\n"
-        f"* The dataset represents a record of approximately 1500 real estate sales in Ames, Iowa.",
-        color="#33CC33"  # change the color to green
+        f"* The dataset represents a record of approximately 1500 real estate sales in Ames, Iowa."
     )
 
     # copied from README file - "Business Requirements" section
@@ -38,8 +37,6 @@ def home_page_body():
         f"1. To understand the relationship between a property's attributes and its sale price.\n"
         f"2. To predict the potential sale prices for properties in Ames, Iowa.\n"
         f"3. To provide easy access to the results through an online application.",
-        icon="✔️",  # change the icon
-        color="#0099FF"  # change the color to blue
     )
 
     # Link to README file, so the users can have access to full
