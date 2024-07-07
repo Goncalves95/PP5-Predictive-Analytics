@@ -11,6 +11,12 @@ class MultiPage:
             layout="wide"
         )
 
+        # Set the background color
+        st.write("<style>body { background-color: #262730; }</style>", unsafe_allow_html=True)
+
+        # Set the font
+        st.write("<style>body { font-family: Helvetica; }</style>", unsafe_allow_html=True)
+
     def add_page(self, title, func) -> None:
         self.pages.append({"title": title, "function": func})
 
