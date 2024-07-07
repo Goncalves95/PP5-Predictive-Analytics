@@ -80,7 +80,7 @@ def page_price_predictor_body():
 def draw_inputs_widgets():
 
     # load dataset
-    df = load_house_prices_data()
+    data = load_house_prices_data()
     percentageMin, percentageMax = 0.2, 2.5
 
     # we create input widgets for the 4 best features

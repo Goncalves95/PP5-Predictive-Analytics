@@ -2,7 +2,21 @@
  
 ![Heritage Housing Ames](https://lh3.googleusercontent.com/p/AF1QipNKRtVDRmvx3OtNnix6GgYkVe6a-eD_0qM1x9dI=s1360-w1360-h1020)
 
-## Table of content
+## Table of Contents
+{:.no_toc}
+
+* [Table of Contents](#table-of-contents)
+* [Project Dataset](#dataset-content)
+* [Business Requirements](#business-requirements)
+* [](#hypothesis-and-how-to-validate)
+* [ML Business Case](#ml-business-case)
+* [Dashboard Design](#dashboard-design)
+* [Unfixed Bugs](#unfixed-bugs)
+* [PEP8 Compliance Testing](#pep8-compliance-testing)
+* [Deployment](#deployment)
+* [Technologies](#technologies)
+* [Credits](#credits)
+* [Acknowledgements](#acknowledgements)
 
 
 ## Dataset Content
