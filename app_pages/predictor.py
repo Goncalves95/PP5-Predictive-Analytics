@@ -3,10 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date
-from src.data import (
-    load_house_prices_data,
-    load_pkl_file,
-    load_inherited_house_data)
+from src.data import (load_house_prices_data, load_pkl_file, load_inherited_house_data)
 from src.ml.evaluate_regression import regression_performance
 from src.ml.predictive import predict_price
 
@@ -84,9 +81,8 @@ def generate_live_data():
 
 
 def predict_sale_price(x_live, sale_price_features, sale_price_pipe):
-    """
-    Predict the sale price based on the input features
-    """
+    print("X_live shape:", x_live.shape)
+    print("sale_price_features:", sale_price_features)
     if st.button("Run Predictive Analysis"):
         prediction = predict_price(x_live, sale_price_features, sale_price_pipe)
         st.write(f"* The predicted sale price is: **${prediction:.2f}**")
