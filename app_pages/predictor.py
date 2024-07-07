@@ -18,10 +18,14 @@ MAX_OVERALL_QUALITY = 10
 MEDIAN_STEP = 20
 
 
-
 def page_price_predictor_body():
+    load_predict_sale_price_files()
+    display_interface()
+    generate_live_data()
+    predict_sale_price()
+    display_inherited_properties()
 
-    # load predict sale price files
+def load_predict_sale_price_files():
     vsn = 'v1'
     sale_price_pipe = load_pkl_file(
         f"outputs/ml_pipeline/predict_price/{vsn}/regression_pipeline.pkl"
@@ -32,7 +36,9 @@ def page_price_predictor_body():
         .columns
         .to_list()
     )
+    return sale_price_pipe, sale_price_features
 
+def display_interface():
     st.write("### Sale Price Predictor Interface")
     st.success(
         f"* The client is interested in predicting the potential sale "
@@ -54,18 +60,18 @@ def page_price_predictor_body():
         f"**Information on categorical features used in prediction**:\n"
         f"- Overall Quality: Rated from 1 (Very Poor) to 10 (Very Excellent).\n\n"
         f"All three numerical features are measured in square feet."
-)
+    )
     st.write("---")
 
-    # Generate Live Data
+def generate_live_data():
     X_live = draw_inputs_widgets()
+    return X_live
 
-    # predict on live data
+def predict_sale_price(X_live, sale_price_features, sale_price_pipe):
     if st.button("Run Predictive Analysis"):
         predict_sale_price(X_live, sale_price_features, sale_price_pipe)
 
-    st.write("---")
-
+def display_inherited_properties(sale_price_features, sale_price_pipe):
     st.write("### Price prediction for the clients inherited properties:")
     in_df = load_inherited_house_data()
     in_df = in_df.filter(sale_price_features)

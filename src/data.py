@@ -7,7 +7,7 @@ import joblib
 @st.cache(suppress_st_warning=True, allow_output_mutation=True)
 def load_house_prices_data():
     df = pd.read_csv("outputs/dataset/housing_records.csv")
-    return data
+    return df
 
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True)
