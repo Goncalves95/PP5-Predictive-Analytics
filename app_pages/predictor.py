@@ -19,11 +19,11 @@ MEDIAN_STEP = 20
 
 
 def page_price_predictor_body():
-    load_predict_sale_price_files()
+    sale_price_pipe, sale_price_features = load_predict_sale_price_files()
     display_interface()
-    generate_live_data()
-    predict_sale_price()
-    display_inherited_properties()
+    x_live = generate_live_data()
+    predict_sale_price(x_live, sale_price_features, sale_price_pipe)
+    display_inherited_properties(sale_price_features, sale_price_pipe, x_live)
 
 def load_predict_sale_price_files():
     vsn = 'v1'
@@ -67,11 +67,12 @@ def generate_live_data():
     X_live = draw_inputs_widgets()
     return X_live
 
-def predict_sale_price(X_live, sale_price_features, sale_price_pipe):
+def predict_sale_price(x_live, sale_price_features, sale_price_pipe):
     if st.button("Run Predictive Analysis"):
-        predict_sale_price(X_live, sale_price_features, sale_price_pipe)
+        prediction = predict_price(x_live, sale_price_features, sale_price_pipe)
+        st.write(f"* The predicted sale price is: **${prediction:.2f}**")
 
-def display_inherited_properties(sale_price_features, sale_price_pipe):
+def display_inherited_properties(sale_price_features, sale_price_pipe, x_live):
     st.write("### Price prediction for the clients inherited properties:")
     in_df = load_inherited_house_data()
     in_df = in_df.filter(sale_price_features)
@@ -80,8 +81,7 @@ def display_inherited_properties(sale_price_features, sale_price_pipe):
     st.write(in_df)
 
     if st.button("Run Prediction"):
-        inherited_price_prediction = predict_sale_price(
-            in_df, sale_price_features, sale_price_pipe)
+        inherited_price_prediction = predict_price(in_df, sale_price_features, sale_price_pipe)
         total_value = inherited_price_prediction.sum()
         total_value = float(total_value.round(1))
         total_value = '${:,.2f}'.format(total_value)
