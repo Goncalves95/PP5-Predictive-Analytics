@@ -14,7 +14,7 @@ def load_house_prices_data():
 def load_inherited_house_data():
     df = pd.read_csv(
         "inputs/dataset/house-price/house-price/inherited_houses.csv")
-    return data
+    return df
 
 
 def load_pkl_file(file_path):

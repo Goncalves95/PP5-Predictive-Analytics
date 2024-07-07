@@ -10,6 +10,14 @@ from src.data import (
 from src.ml.evaluate_regression import regression_performance
 from src.ml.predictive import predict_price
 
+# Constants
+MIN_PERCENTAGE = 0.2
+MAX_PERCENTAGE = 2.5
+MIN_OVERALL_QUALITY = 1
+MAX_OVERALL_QUALITY = 10
+MEDIAN_STEP = 20
+
+
 
 def page_price_predictor_body():
 
@@ -78,62 +86,31 @@ def page_price_predictor_body():
 
 
 def draw_inputs_widgets():
-
-    # load dataset
     data = load_house_prices_data()
-    percentageMin, percentageMax = 0.2, 2.5
+    features = ["OverallQual", "TotalBsmtSF", "2ndFlrSF", "GarageArea"]
 
-    # we create input widgets for the 4 best features
-    col01, col02 = st.beta_columns(2)
-    col03, col04 = st.beta_columns(2)
-
-    # We are using these features to feed the ML pipeline -
-    # create an empty DataFrame, which will be the live data
     X_live = pd.DataFrame([], index=[0])
 
-    with col01:
-        feature = "OverallQual"
-        st_widget = st.number_input(
-            label='Overall Quality',
-            min_value=1,
-            max_value=10,
-            value=int(df[feature].median()),
-            step=1
-        )
-    X_live[feature] = st_widget
-
-    with col02:
-        feature = "TotalBsmtSF"
-        st_widget = st.number_input(
-            label='Total Basement SQFT',
-            min_value=int(df[feature].min()*percentageMin),
-            max_value=int(df[feature].max()*percentageMax),
-            value=int(df[feature].median()),
-            step=20
-        )
-    X_live[feature] = st_widget
-
-    with col03:
-        feature = "2ndFlrSF"
-        st_widget = st.number_input(
-            label='2nd Floor SQFT',
-            min_value=int(df[feature].min()*percentageMin),
-            max_value=int(df[feature].max()*percentageMax),
-            value=int(df[feature].median()),
-            step=20
-        )
-    X_live[feature] = st_widget
-
-    with col04:
-        feature = "GarageArea"
-        st_widget = st.number_input(
-            label="Garage Area SQFT",
-            min_value=int(df[feature].min()*percentageMin),
-            max_value=int(df[feature].max()*percentageMax),
-            value=int(df[feature].median()),
-            step=20
-        )
-    X_live[feature] = st_widget
+    for feature in features:
+        col = st.beta_columns(2)[features.index(feature) % 2]
+        with col:
+            if feature == "OverallQual":
+                st_widget = st.number_input(
+                    label=f"{feature}",
+                    min_value=MIN_OVERALL_QUALITY,
+                    max_value=MAX_OVERALL_QUALITY,
+                    value=int(data[feature].median()),
+                    step=1
+                )
+            else:
+                st_widget = st.number_input(
+                    label=f"{feature} SQFT",
+                    min_value=int(data[feature].min() * MIN_PERCENTAGE),
+                    max_value=int(data[feature].max() * MAX_PERCENTAGE),
+                    value=int(data[feature].median()),
+                    step=MEDIAN_STEP
+                )
+            X_live[feature] = st_widget
 
     return X_live
 
