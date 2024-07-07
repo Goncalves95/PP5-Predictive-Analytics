@@ -11,9 +11,10 @@ app = MultiPage(app_name="Heritage Housing Ames, USA")  # Create an instance of 
 
 # Add your app pages here using.add_page()
 app.add_page("🏠 Project Summary", home_page_body)
+app.add_page("📈 Predictor Price", page_price_predictor_body)
 app.add_page("💰 Predict Price", page_predict_price_ml_body)
 app.add_page("📊 Analysis Prices", page_analysis_body)
-app.add_page("📈 Predictor Price", page_price_predictor_body)
+
 
 app.run()  # Run the app
 
