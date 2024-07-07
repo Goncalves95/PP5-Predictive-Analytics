@@ -13,7 +13,31 @@ def home_page_body():
     
     st.image(image_main, caption='Ames City')
 
-    st.write("### Project Summary")
+    st.write("<h2 style='font-size: 24px; font-weight: bold; color: #66D9EF;'>Project Summary</h2>")
+
+    st.markdown("""
+    <style>
+    body {
+        background-color: #262730;
+        font-family: Helvetica;
+    }
+   .paragraph {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #FFFFFF; /* white text */
+    }
+   .header {
+        font-size: 24px;
+        font-weight: bold;
+        color: #66D9EF; /* blue-green text */
+    }
+   .info {
+        font-size: 16px;
+        font-style: italic;
+        color: #AAAAAA; /* gray text */
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
     # text based on README file - "Dataset Content" section
     st.info(
