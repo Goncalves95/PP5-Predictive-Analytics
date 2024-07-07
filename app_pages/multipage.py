@@ -5,22 +5,6 @@ class MultiPage:
         self.pages = []
         self.app_name = app_name
 
-        st.markdown("""
-        <style>
-        streamlit-app, streamlit-app-header, streamlit-app-content {
-            background-color: #000000;
-            color: #FFFFFF;
-            font-family: Helvetica Neue;
-        }
-        streamlit-app-header {
-            border-bottom: 1px solid #FFFFFF;
-        }
-        streamlit-app-content {
-            padding: 1rem;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-
     def add_page(self, title, func) -> None:
         self.pages.append({"title": title, "function": func})
 
