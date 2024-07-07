@@ -19,13 +19,20 @@ MEDIAN_STEP = 20
 
 
 def page_price_predictor_body():
+    """
+    Main function to generate the price predictor interface
+    """
     sale_price_pipe, sale_price_features = load_predict_sale_price_files()
     display_interface()
     x_live = generate_live_data()
     predict_sale_price(x_live, sale_price_features, sale_price_pipe)
     display_inherited_properties(sale_price_features, sale_price_pipe, x_live)
 
+
 def load_predict_sale_price_files():
+    """
+    Load the sale price pipeline and features from files
+    """
     vsn = 'v1'
     sale_price_pipe = load_pkl_file(
         f"outputs/ml_pipeline/predict_price/{vsn}/regression_pipeline.pkl"
@@ -38,7 +45,11 @@ def load_predict_sale_price_files():
     )
     return sale_price_pipe, sale_price_features
 
+
 def display_interface():
+    """
+    Display the sale price predictor interface
+    """
     st.write("### Sale Price Predictor Interface")
     st.success(
         f"* The client is interested in predicting the potential sale "
@@ -63,16 +74,28 @@ def display_interface():
     )
     st.write("---")
 
+
 def generate_live_data():
+    """
+    Generate live data for the price predictor
+    """
     X_live = draw_inputs_widgets()
     return X_live
 
+
 def predict_sale_price(x_live, sale_price_features, sale_price_pipe):
+    """
+    Predict the sale price based on the input features
+    """
     if st.button("Run Predictive Analysis"):
         prediction = predict_price(x_live, sale_price_features, sale_price_pipe)
         st.write(f"* The predicted sale price is: **${prediction:.2f}**")
 
+
 def display_inherited_properties(sale_price_features, sale_price_pipe, x_live):
+    """
+    Display the price prediction for the client's inherited properties
+    """
     st.write("### Price prediction for the clients inherited properties:")
     in_df = load_inherited_house_data()
     in_df = in_df.filter(sale_price_features)
@@ -92,6 +115,9 @@ def display_inherited_properties(sale_price_features, sale_price_pipe, x_live):
 
 
 def draw_inputs_widgets():
+    """
+    Draw the input widgets for the price predictor
+    """
     data = load_house_prices_data()
     features = ["OverallQual", "TotalBsmtSF", "2ndFlrSF", "GarageArea"]
 
@@ -109,14 +135,7 @@ def draw_inputs_widgets():
                     step=1
                 )
             else:
-                st_widget = st.number_input(
-                    label=f"{feature} SQFT",
-                    min_value=int(data[feature].min() * MIN_PERCENTAGE),
-                    max_value=int(data[feature].max() * MAX_PERCENTAGE),
-                    value=int(data[feature].median()),
-                    step=MEDIAN_STEP
-                )
-            X_live[feature] = st_widget
+                st_widget = st
 
     return X_live
 
