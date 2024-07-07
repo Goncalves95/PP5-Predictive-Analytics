@@ -28,7 +28,6 @@ def home_page_body():
         f"**Dataset**\n"
         f"* The dataset can be accessed at [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).\n"
         f"* The dataset represents a record of approximately 1500 real estate sales in Ames, Iowa.",
-        icon="ℹ️",  # change the icon
         color="#33CC33"  # change the color to green
     )
 
