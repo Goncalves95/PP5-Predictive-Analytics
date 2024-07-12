@@ -49,10 +49,9 @@ def display_interface():
     """
     st.write("### Sale Price Predictor Interface")
     st.success(
-        f"* The client is interested in predicting the potential sale "
-        f" prices"
+        f"* The client is interested in predicting the potential sale prices"
         f" for properties in Ames, Iowa, and specifically, she wants to"
-        f" determine a potential value for the properties she inherited "
+        f" determine a potential value for the properties she inherited."
         f" (Business Requirement 2). \n"
     )
     st.info(
@@ -99,7 +98,7 @@ def display_inherited_properties(sale_price_features, sale_price_pipe, x_live):
     """
     Display the price prediction for the client's inherited properties
     """
-    st.write("### Price prediction for the clients inherited properties:")
+    st.write("### Price prediction for the client's inherited properties:")
     in_df = load_inherited_house_data()
     in_df = in_df.filter(sale_price_features)
 
@@ -128,8 +127,8 @@ def draw_inputs_widgets():
     percentageMin, percentageMax = 0.2, 2.5
 
     # Create four columns to organize the input widgets
-    col01, col02 = st.beta_columns(2)
-    col03, col04 = st.beta_columns(2)
+    col01, col02 = st.columns(2)
+    col03, col04 = st.columns(2)
 
     # Create an empty DataFrame to store the live input data
     X_live = pd.DataFrame([], index=[0])
@@ -180,9 +179,6 @@ def draw_inputs_widgets():
     X_live[feature] = st_widget
 
     return X_live
-
-print(X_live.columns)
-print(sale_price_features)
 
 #############      #############      #############
 #############      #############      #############
