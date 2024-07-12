@@ -398,9 +398,9 @@ Thanks and appreciation go to the following sources and people:
 - Check some House Price Prediction Machine Learning End-To-End Project with IndianAI Produtions [Link](https://www.youtube.com/@IndianAIProduction)
 - Preject steps and customise themes with 1littlecoder [Link](https://www.youtube.com/watch?v=iUgNIFrVejc)
 - Predictive Power Score learned with Paul van der Laken [Link](https://github.com/paulvanderlaken/ppsr)
-  - Heritage Housing Issues project by T. Hullis [Link](https://github.com/t-hullis/milestone-project-heritage-housing-issues)
-  - Heritage Housing Issues project by Amare Teklay Hailu [Link](https://github.com/Amareteklay/heritage-housing-issues/blob/main/README.md)
-  - Heritage Housing Issues project by Farid Benachenhou [Link](https://github.com/faridjos/milestone-project-heritage-housing-issues)
+- Heritage Housing Issues project by T. Hullis [Link](https://github.com/t-hullis/milestone-project-heritage-housing-issues)
+- Heritage Housing Issues project by Amare Teklay Hailu [Link](https://github.com/Amareteklay/heritage-housing-issues/blob/main/README.md)
+- Heritage Housing Issues project by Farid Benachenhou [Link](https://github.com/faridjos/milestone-project-heritage-housing-issues)
 - StackOverflow helped resolve several issues through out the project.
 - As always a big thank you to my husband, Railson Gonçalves.
 
