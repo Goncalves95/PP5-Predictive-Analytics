@@ -3,6 +3,8 @@ import streamlit as st
 def page_project_hypothesis_body():
     st.write("### Heritage Housing Ames, USA Hypotheses and Validation")
 
+    image_hypothesis = plt.imread(f"assets/images/ames-iowa-city-skyline-com-construções-da-cor-o-céu-azul-e-as-reflexões-ilustra-do-vetor-viagem-de-neg-cios-turismo-146265022.jpg")
+
     # Hypothesis 1
     st.success(
         f"**H1 - The overall quality (OverallQual) of a property significantly impacts its sale price in Ames, Iowa.**\n"
