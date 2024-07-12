@@ -15,20 +15,6 @@ def home_page_body():
 
     st.write("Project Summary")
 
-    # copied from README file - "Objectives and Goals" section
-    st.success(
-        f"**Project Objectives**\n\n"
-        f"1. Develop a machine learning model to predict the sale price of properties in Ames, Iowa, based on various features such as overall quality, basement area, garage area, and more.\n"
-        f"2. Create a user-friendly interface for users to input their property features and receive a predicted sale price, helping them to set a competitive price for their property.\n"
-        f"3. Analyze the relationship between property features and sale prices, providing insights and recommendations for users to make informed decisions about buying or selling properties."
-    )
-
-    # copied from README file - "History" section
-    st.success(
-        f"**Project Background**\n\n"
-        f"The Heritage Housing Ames project was inspired by a client who inherited several properties in Ames, Iowa, and was looking for a way to estimate their sale prices. With a lack of knowledge about the local real estate market, the client was struggling to determine the value of their properties. This project aims to provide a solution to this problem by developing a machine learning model that can predict sale prices based on various property features."
-    )
-
     # text based on README file - "Dataset Content" section
     st.info(
         f"**Welcome to Ames Housing Price Predictor!**\n\n"
@@ -42,6 +28,21 @@ def home_page_body():
         f"**Dataset**\n"
         f"* The dataset can be accessed at [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).\n"
         f"* The dataset represents a record of approximately 1500 real estate sales in Ames, Iowa."
+    )
+
+
+    # copied from README file - "Objectives and Goals" section
+    st.success(
+        f"**Project Objectives**\n\n"
+        f"1. Develop a machine learning model to predict the sale price of properties in Ames, Iowa, based on various features such as overall quality, basement area, garage area, and more.\n"
+        f"2. Create a user-friendly interface for users to input their property features and receive a predicted sale price, helping them to set a competitive price for their property.\n"
+        f"3. Analyze the relationship between property features and sale prices, providing insights and recommendations for users to make informed decisions about buying or selling properties."
+    )
+
+    # copied from README file - "History" section
+    st.success(
+        f"**Project Background**\n\n"
+        f"The Heritage Housing Ames project was inspired by a client who inherited several properties in Ames, Iowa, and was looking for a way to estimate their sale prices. With a lack of knowledge about the local real estate market, the client was struggling to determine the value of their properties. This project aims to provide a solution to this problem by developing a machine learning model that can predict sale prices based on various property features."
     )
 
     # copied from README file - "Business Requirements" section
