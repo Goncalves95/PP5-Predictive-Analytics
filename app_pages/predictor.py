@@ -114,24 +114,63 @@ def draw_inputs_widgets():
     """
     Draw the input widgets for the price predictor
     """
-    data = load_house_prices_data()
-    features = ["OverallQual", "TotalBsmtSF", "2ndFlrSF", "GarageArea"]
+    # Load the house prices dataset
+    df = load_house_prices_data()
 
+    # Set the minimum and maximum percentage values for the input widgets
+    percentageMin, percentageMax = 0.2, 2.5
+
+    # Create four columns to organize the input widgets
+    col01, col02 = st.beta_columns(2)
+    col03, col04 = st.beta_columns(2)
+
+    # Create an empty DataFrame to store the live input data
     X_live = pd.DataFrame([], index=[0])
 
-    for feature in features:
-        col = st.beta_columns(2)[features.index(feature) % 2]
-        with col:
-            if feature == "OverallQual":
-                st_widget = st.number_input(
-                    label=f"{feature}",
-                    min_value=MIN_OVERALL_QUALITY,
-                    max_value=MAX_OVERALL_QUALITY,
-                    value=int(data[feature].median()),
-                    step=1
-                )
-            else:
-                st_widget = st
+    # Create input widgets for four features
+    with col01:
+        feature = "OverallQual"
+        st_widget = st.number_input(
+            label='Overall Quality',
+            min_value=1,
+            max_value=10,
+            value=int(df[feature].median()),
+            step=1
+        )
+    X_live[feature] = st_widget
+
+    with col02:
+        feature = "TotalBsmtSF"
+        st_widget = st.number_input(
+            label='Total Basement SQFT',
+            min_value=int(df[feature].min()*percentageMin),
+            max_value=int(df[feature].max()*percentageMax),
+            value=int(df[feature].median()),
+            step=20
+        )
+    X_live[feature] = st_widget
+
+    with col03:
+        feature = "2ndFlrSF"
+        st_widget = st.number_input(
+            label='2nd Floor SQFT',
+            min_value=int(df[feature].min()*percentageMin),
+            max_value=int(df[feature].max()*percentageMax),
+            value=int(df[feature].median()),
+            step=20
+        )
+    X_live[feature] = st_widget
+
+    with col04:
+        feature = "GarageArea"
+        st_widget = st.number_input(
+            label="Garage Area SQFT",
+            min_value=int(df[feature].min()*percentageMin),
+            max_value=int(df[feature].max()*percentageMax),
+            value=int(df[feature].median()),
+            step=20
+        )
+    X_live[feature] = st_widget
 
     return X_live
 
