@@ -415,7 +415,7 @@ Thanks and appreciation go to the following sources and people:
 - Heritage Housing Issues project by Amare Teklay Hailu [Link](https://github.com/Amareteklay/heritage-housing-issues/blob/main/README.md)
 - Heritage Housing Issues project by Farid Benachenhou [Link](https://github.com/faridjos/milestone-project-heritage-housing-issues)
 - StackOverflow helped resolve several issues through out the project.
-- As always a big thank you to my husband, Railson Gonçalves.
+- As always, I want to express my gratitude to my husband, Railson Gonçalves.
 
 Come and see the [Live App](https://heritage-housing-fernando-74a4ebdc845a.herokuapp.com/#heritage-housing-ames-usa)
 
