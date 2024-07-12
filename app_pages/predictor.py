@@ -30,7 +30,7 @@ def load_predict_sale_price_files():
     """
     Load the sale price pipeline and features from files
     """
-    vsn = 'v1'
+    vsn = 'v2'
     sale_price_pipe = load_pkl_file(
         f"outputs/ml_pipeline/predict_price/{vsn}/regression_pipeline.pkl"
     )
