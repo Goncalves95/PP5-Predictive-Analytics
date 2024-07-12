@@ -86,15 +86,19 @@ def predict_sale_price(x_live, sale_price_features, sale_price_pipe):
     # Re-order the columns to match the order in sale_price_features
     x_live = x_live[sale_price_features]
     
-    # Fill missing values in x_live
-    x_live = x_live.fillna(x_live.median())
-    
     # Verify the shape
     print(x_live.shape)
     
     if st.button("Run Predictive Analysis"):
         prediction = predict_price(x_live, sale_price_features, sale_price_pipe)
-        st.write(f"* The predicted sale price is: **${prediction:.2f}**")
+        # Check the type and value of prediction
+        print("Prediction:", prediction)
+        
+        # Ensure prediction is numeric and format it as a float with two decimal places
+        if isinstance(prediction, (int, float)):
+            st.write(f"* The predicted sale price is: **${prediction:.2f}**")
+        else:
+            st.write(f"* The predicted sale price could not be determined.")
 
 
 def display_inherited_properties(sale_price_features, sale_price_pipe, x_live):
