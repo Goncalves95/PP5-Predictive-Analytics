@@ -1,6 +1,6 @@
 # :earth_americas: **Heritage Housing Ames, USA** :house_with_garden:
  
-![Heritage Housing Ames](assets/images/ames-iowa-skyline-com-construções-da-cor-e-o-céu-azul-100932701.jpg)
+![Heritage Housing Ames](assets/images/ames-iowa-skyline-com-construções-da-cor-e-o-céu-azul-100932701.jpg)
 
 Come and see the [Live App](https://heritage-housing-fernando-74a4ebdc845a.herokuapp.com/#heritage-housing-ames-usa)
 

@@ -8,7 +8,7 @@ def home_page_body():
     Displays contents of the project home page
     """
 
-    image_main = plt.imread(f"assets/images/ames-iowa-skyline-com-construções-coloridas-e-reflexões-isoladas-em-branco-ilustração-vetorial-194806085.jpg")
+    image_main = plt.imread(f"assets/images/ames-iowa-skyline-com-construções-coloridas-e-reflexões-isoladas-em-branco-ilustração-vetorial-194806085.jpg")
     image_isu = plt.imread(f"assets/images/ames_city.jpeg")
     
     st.image(image_main, caption='Ames City')
