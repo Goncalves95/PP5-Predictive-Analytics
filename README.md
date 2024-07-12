@@ -44,7 +44,7 @@ Assist homeowners in understanding the value of their property and making data-d
 
 The Heritage Housing Ames project was inspired by a client who inherited several properties in Ames, Iowa, and was looking for a way to estimate their sale prices. With a lack of knowledge about the local real estate market, the client was struggling to determine the value of their properties. This project aims to provide a solution to this problem by developing a machine learning model that can predict sale prices based on various property features.
 
-## Dataset Content
+## :floppy_disk: Dataset Content
 
 The primary purpose of this project is to provide a tool that enables users to predict the potential sale price of a property in Ames, Iowa, by providing detailed and relevant information about the" real estate in question.
 Specifically, a client has requested this application to estimate the sale price for several inherited properties in Ames, Iowa. The client has supplied a publicly available dataset which is used to train the machine learning model and predict local real estate sale prices.
@@ -86,7 +86,7 @@ Specifically, a client has requested this application to estimate the sale price
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
 
-## Business Requirements
+## :bookmark: Business Requirements
 
 The project has three main business requirements:
 
@@ -97,7 +97,7 @@ Therefore, the client expects data visualizations that illustrate the correlatio
 
 3. The client would like to have easy access to the results through an online application.
 
-## Hypothesis and how to validate?
+## :white_check_mark: Hypothesis and how to validate?
 
 1. Hypothesis 1: The overall quality (OverallQual) of a property significantly impacts its sale price in Ames, Iowa.
 
@@ -122,7 +122,7 @@ Validation Approach:
     * Descriptive Statistics: Calculate summary statistics and trends to identify any patterns or anomalies related to property age and sale prices.
     * Machine Learning Model Analysis: Use regression models to quantify the predictive power of YearBuilt on Sale Price, considering potential nonlinear relationships.
 
-## ML Business Case
+## :open_file_folder: ML Business Case
 
 * The project addresses the need to predict property sale prices for inherited properties in Ames, Iowa, leveraging machine learning to support informed decision-making and financial planning.
 
@@ -146,7 +146,7 @@ Validation Approach:
     Financial Planning: Facilitates financial planning by estimating property values and potential sale proceeds.
     Operational Efficiency: Enhances efficiency by leveraging data-driven insights to streamline decision-making processes.
 
-## User Storys
+## :outbox_tray: User Storys
 
 * SOME USER STORYS:
 
@@ -160,7 +160,7 @@ Validation Approach:
 
 **User Story 5** As a client, I want to be able to view a summary of the machine learning pipeline used to predict sale prices so that I can understand the methodology behind the predictions and have confidence in the results.
 
-## Dashboard Design
+## :clipboard: Dashboard Design
 
 ### Home Page
     Content:
@@ -319,16 +319,16 @@ Validation Approach:
     Implement interactive visualizations or charts to complement prediction results.
     Provide additional insights or recommendations based on predicted sale prices.
 
-## Unfixed Bugs
+## :bug: Unfixed Bugs
 
 The app does not currently contain any unfixed bugs.
 
-## PEP8 Compliance Testing
+## :triangular_ruler: PEP8 Compliance Testing
 
 All python files where passed through the [CI Python Linter](https://pep8ci.herokuapp.com/). 
 Those files incuded the `app_pages` files. A few small errors were fixed, such as long lines or trailing white spaces.
 
-## Future Work
+## :mortar_board: Future Work
 
 While the Heritage Housing Ames project has achieved its primary objectives, there are several areas for further research and improvement:
 
@@ -338,7 +338,7 @@ Improve model interpretability: Developing techniques to explain the predictions
 Enhance user interface: Further development of the user interface could include features such as interactive visualizations, personalized recommendations, or integration with popular real estate platforms.
 Investigate alternative machine learning approaches: Exploring other machine learning algorithms or techniques, such as deep learning or ensemble methods, could lead to improved prediction accuracy or more robust models.
 
-## Deployment
+## :crystal_ball: Deployment
 
 ### Heroku
 
@@ -353,7 +353,7 @@ Investigate alternative machine learning approaches: Exploring other machine lea
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
-## Technologies
+## :computer: Technologies
 
 ### Development and Deployment
 
@@ -375,7 +375,7 @@ Investigate alternative machine learning approaches: Exploring other machine lea
 - [PPScore](https://pypi.org/project/ppscore/) was used to determine the predictive power score of the data features.
 - [MatPlotLib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/) were used for constructing plots to visualize the data analysis.
 
-## Credits
+## :mega: Credits
 
 ### Sources of code
 
@@ -388,7 +388,7 @@ Investigate alternative machine learning approaches: Exploring other machine lea
 - The images of Iowa State University was taken from [Niche.com](https://www.niche.com/colleges/iowa-state-university/)
 - The Ames images was taken from [dreamstime.com](https://pt.dreamstime.com/ames-iowa-skyline-com-as-constru%C3%A7%C3%B5es-da-cor-isoladas-em-backgro-branco-image101534629)
 
-## Acknowledgements
+## :mega: Acknowledgements
 
 Thanks and appreciation go to the following sources and people:
 
