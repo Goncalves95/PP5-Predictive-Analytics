@@ -10,7 +10,7 @@ def home_page_body():
 
     image_main = plt.imread(f"assets/images/ames-iowa-skyline-com-construções-coloridas-e-reflexões-isoladas-em-branco-ilustração-vetorial-194806085.jpg")
     image_isu = plt.imread(f"assets/images/ames_city.jpeg")
-    
+
     st.image(image_main, caption='Ames City')
 
     st.write("Project Summary")
@@ -29,7 +29,6 @@ def home_page_body():
         f"* The dataset can be accessed at [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).\n"
         f"* The dataset represents a record of approximately 1500 real estate sales in Ames, Iowa."
     )
-
 
     # copied from README file - "Objectives and Goals" section
     st.success(
@@ -63,10 +62,8 @@ def home_page_body():
         f"* This project was developed by Fernando Gonçalves. For study purposes"
         f" about the developer, visit her"
         f" [MyPortfolio](https://www.iamfernando.com).")
-    
 
     st.image(image_isu, caption='Ames, Iowa, USA.')
-
 
 #############      #############      #############
 #############      #############      #############

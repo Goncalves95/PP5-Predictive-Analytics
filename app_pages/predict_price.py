@@ -37,7 +37,7 @@ def page_predict_price_ml_body():
         f"The model was tuned via hyperparameter search, achieving an R2 Score of 0.8 or better "
         f"on both train and test sets. "
         f"Four crucial features were identified for optimal predictive power."
-)
+    )
     st.write("---")
 
     # show pipeline steps
