@@ -384,7 +384,6 @@ Investigate alternative machine learning approaches: Exploring other machine lea
 
 ### Media
 
-- The image of main street Ames is from [Wikipedia](https://commons.wikimedia.org/wiki/File:Ames_Iowa_Main_Street_%28bannerportada_esvoy%29.jpg)
 - The images of Iowa State University was taken from [Niche.com](https://www.niche.com/colleges/iowa-state-university/)
 - The Ames images was taken from [dreamstime.com](https://pt.dreamstime.com/ames-iowa-skyline-com-as-constru%C3%A7%C3%B5es-da-cor-isoladas-em-backgro-branco-image101534629)
 
@@ -394,6 +393,10 @@ Thanks and appreciation go to the following sources and people:
 
 - Several past projects provided valuable additional information on how to complete a successful project:
 - Setup of widgest learned with t-hullis[Link](https://github.com/t-hullis/milestone-project-heritage-housing-issues/tree/main)
+- Learning more with Data Professor for building web aplications data sets [Link](https://www.youtube.com/@DataProfessor)
+- Lear building app with NeuralNine [Link](https://www.youtube.com/@NeuralNine)
+- Check some House Price Prediction Machine Learning End-To-End Project with IndianAI Produtions [Link](https://www.youtube.com/@IndianAIProduction)
+- Preject steps and customise themes with 1littlecoder [Link](https://www.youtube.com/watch?v=iUgNIFrVejc)
 - Predictive Power Score learned with Paul van der Laken [Link](https://github.com/paulvanderlaken/ppsr)
   - Heritage Housing Issues project by T. Hullis [Link](https://github.com/t-hullis/milestone-project-heritage-housing-issues)
   - Heritage Housing Issues project by Amare Teklay Hailu [Link](https://github.com/Amareteklay/heritage-housing-issues/blob/main/README.md)
