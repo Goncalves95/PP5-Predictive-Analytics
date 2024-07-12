@@ -197,6 +197,19 @@ Future Updates:
 Consider integrating interactive elements such as buttons or dropdowns for enhanced user interaction.
 Update visual content based on user feedback or additional project developments.
 
+### Project Hypothesis Page
+
+This page provides insights and validation for the hypotheses related to the Heritage Housing Ames project. It includes:
+
+- Hypothesis 1: The overall quality (OverallQual) of a property significantly impacts its sale price in Ames, Iowa.
+  - Validation: Confirmed. The feature importance analysis and correlation studies show a strong positive correlation between OverallQual and Sale Price.
+
+- Hypothesis 2: Properties with larger ground-level living areas (GrLivArea) tend to command higher sale prices in Ames, Iowa.
+  - Validation: Confirmed. Analysis reveals a strong positive correlation between GrLivArea and Sale Price, indicating larger living areas are associated with higher sale prices.
+
+- Hypothesis 3: The age of a property (YearBuilt) influences its sale price, with newer constructions generally commanding higher prices in Ames, Iowa.
+  - Validation: Confirmed. Trend analysis and regression models demonstrate that YearBuilt has a significant positive impact on Sale Price, with newer properties tending to have higher sale prices.
+
 ### Predict Price Page
 
 Content:
