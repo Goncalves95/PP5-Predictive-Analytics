@@ -1,4 +1,4 @@
-# **Heritage Housing Ames, USA**
+# :earth_americas: **Heritage Housing Ames, USA** :house_with_garden:
  
 ![Heritage Housing Ames](https://lh3.googleusercontent.com/p/AF1QipNKRtVDRmvx3OtNnix6GgYkVe6a-eD_0qM1x9dI=s1360-w1360-h1020)
 
@@ -18,6 +18,18 @@
 * [Credits](#credits)
 * [Acknowledgements](#acknowledgements)
 
+## :round_pushpin: Objectives and Goals
+
+The Heritage Housing Ames project aims to provide a valuable tool for individuals looking to sell their houses in Ames, Iowa. The main objectives and goals of this project are:
+
+Develop a machine learning model to predict the sale price of properties in Ames, Iowa, based on various features such as overall quality, basement area, garage area, and more.
+Create a user-friendly interface for users to input their property features and receive a predicted sale price, helping them to set a competitive price for their property.
+Analyze the relationship between property features and sale prices, providing insights and recommendations for users to make informed decisions about buying or selling properties.
+Assist homeowners in understanding the value of their property and making data-driven decisions to maximize their sale price.
+
+## :book: History
+
+The Heritage Housing Ames project was inspired by a client who inherited several properties in Ames, Iowa, and was looking for a way to estimate their sale prices. With a lack of knowledge about the local real estate market, the client was struggling to determine the value of their properties. This project aims to provide a solution to this problem by developing a machine learning model that can predict sale prices based on various property features.
 
 ## Dataset Content
 
@@ -303,6 +315,16 @@ The app does not currently contain any unfixed bugs.
 All python files where passed through the [CI Python Linter](https://pep8ci.herokuapp.com/). 
 Those files incuded the `app_pages` files. A few small errors were fixed, such as long lines or trailing white spaces.
 
+## Future Work
+
+While the Heritage Housing Ames project has achieved its primary objectives, there are several areas for further research and improvement:
+
+Integrate additional data sources: Incorporating data from other sources, such as local economic indicators, weather patterns, or crime rates, could improve the accuracy of the sale price predictions.
+Expand to other regions: The model could be adapted to predict sale prices in other regions or cities, providing a more comprehensive solution for homeowners and real estate agents.
+Improve model interpretability: Developing techniques to explain the predictions made by the model could provide users with a better understanding of how the property features contribute to the predicted sale price.
+Enhance user interface: Further development of the user interface could include features such as interactive visualizations, personalized recommendations, or integration with popular real estate platforms.
+Investigate alternative machine learning approaches: Exploring other machine learning algorithms or techniques, such as deep learning or ensemble methods, could lead to improved prediction accuracy or more robust models.
+
 ## Deployment
 
 ### Heroku
@@ -350,7 +372,6 @@ Those files incuded the `app_pages` files. A few small errors were fixed, such a
 ### Media
 
 - The image of main street Ames is from [Wikipedia](https://commons.wikimedia.org/wiki/File:Ames_Iowa_Main_Street_%28bannerportada_esvoy%29.jpg)
-
 - The images of Iowa State University was taken from [Niche.com](https://www.niche.com/colleges/iowa-state-university/)
 
 ## Acknowledgements
