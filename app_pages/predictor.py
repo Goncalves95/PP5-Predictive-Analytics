@@ -91,12 +91,13 @@ def predict_sale_price(x_live, sale_price_features, sale_price_pipe):
     
     if st.button("Run Predictive Analysis"):
         prediction = predict_price(x_live, sale_price_features, sale_price_pipe)
+        
         # Check the type and value of prediction
         print("Prediction:", prediction)
         
         # Ensure prediction is numeric and format it as a float with two decimal places
         if isinstance(prediction, (int, float)):
-            st.write(f"* The predicted sale price is: **${prediction:.2f}**")
+            st.write(f"* Given the features provided for the property, the model has predicted a sale value of: ${prediction:.2f}")
         else:
             st.write(f"* The predicted sale price could not be determined.")
 
