@@ -127,8 +127,8 @@ def draw_inputs_widgets(sale_price_features):
     percentageMin, percentageMax = 0.2, 2.5
 
     # Create four columns to organize the input widgets
-    col01, col02 = st.columns(2)
-    col03, col04 = st.columns(2)
+    col01, col02 = st.beta_columns(2)
+    col03, col04 = st.beta_columns(2)
 
     # Create an empty DataFrame to store the live input data
     X_live = pd.DataFrame([], index=[0], columns=sale_price_features)
