@@ -326,7 +326,7 @@ The app does not currently contain any unfixed bugs.
 ## :triangular_ruler: PEP8 Compliance Testing
 
 All python files where passed through the [CI Python Linter](https://pep8ci.herokuapp.com/). 
-Those files incuded the `app_pages` files. A few small errors appears, such as long lines, trailing white spaces and too many leading '#' for block comment (because my sign name).
+Those files incuded the `app_pages` files. The small errors like trailing white spaces was fixes, and appear few small errors to such as long lines and too many leading '#' for block comment (because my sign name).
 
 ## :mortar_board: Future Work
 
