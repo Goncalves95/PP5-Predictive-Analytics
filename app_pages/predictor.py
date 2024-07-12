@@ -21,7 +21,7 @@ def page_price_predictor_body():
     """
     sale_price_pipe, sale_price_features = load_predict_sale_price_files()
     display_interface()
-    x_live = generate_live_data()
+    x_live = generate_live_data(sale_price_features)
     predict_sale_price(x_live, sale_price_features, sale_price_pipe)
     display_inherited_properties(sale_price_features, sale_price_pipe, x_live)
 
@@ -71,11 +71,11 @@ def display_interface():
     st.write("---")
 
 
-def generate_live_data():
+def generate_live_data(sale_price_features):
     """
     Generate live data for the price predictor
     """
-    X_live = draw_inputs_widgets()
+    X_live = draw_inputs_widgets(sale_price_features)
     return X_live
 
 
@@ -116,7 +116,7 @@ def display_inherited_properties(sale_price_features, sale_price_pipe, x_live):
         st.write(f"**{total_value}**")
 
 
-def draw_inputs_widgets():
+def draw_inputs_widgets(sale_price_features):
     """
     Draw the input widgets for the price predictor
     """
@@ -127,11 +127,11 @@ def draw_inputs_widgets():
     percentageMin, percentageMax = 0.2, 2.5
 
     # Create four columns to organize the input widgets
-    col01, col02 = st.beta_columns(2)
-    col03, col04 = st.beta_columns(2)
+    col01, col02 = st.columns(2)
+    col03, col04 = st.columns(2)
 
     # Create an empty DataFrame to store the live input data
-    X_live = pd.DataFrame([], index=[0])
+    X_live = pd.DataFrame([], index=[0], columns=sale_price_features)
 
     # Create input widgets for four features
     with col01:
@@ -143,7 +143,7 @@ def draw_inputs_widgets():
             value=int(df[feature].median()),
             step=1
         )
-    X_live[feature] = st_widget
+        X_live[feature] = st_widget
 
     with col02:
         feature = "TotalBsmtSF"
@@ -154,7 +154,7 @@ def draw_inputs_widgets():
             value=int(df[feature].median()),
             step=20
         )
-    X_live[feature] = st_widget
+        X_live[feature] = st_widget
 
     with col03:
         feature = "2ndFlrSF"
@@ -165,7 +165,7 @@ def draw_inputs_widgets():
             value=int(df[feature].median()),
             step=20
         )
-    X_live[feature] = st_widget
+        X_live[feature] = st_widget
 
     with col04:
         feature = "GarageArea"
@@ -176,7 +176,15 @@ def draw_inputs_widgets():
             value=int(df[feature].median()),
             step=20
         )
-    X_live[feature] = st_widget
+        X_live[feature] = st_widget
+
+    # Fill missing columns with default values (median or 0)
+    for col in sale_price_features:
+        if col not in X_live.columns:
+            if col in df.columns:
+                X_live[col] = df[col].median()
+            else:
+                X_live[col] = 0
 
     return X_live
 
