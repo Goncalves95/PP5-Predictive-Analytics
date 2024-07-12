@@ -2,7 +2,7 @@
  
 ![Heritage Housing Ames](assets/images/ames-iowa-skyline-com-construções-da-cor-e-o-céu-azul-100932701.jpg)
 
-Come and see the [Live App](https://dashboard.heroku.com/apps/heritage-housing-fernando/deploy/github)
+Come and see the [Live App](https://heritage-housing-fernando-74a4ebdc845a.herokuapp.com/#heritage-housing-ames-usa)
 
 ## Table of Contents
 
@@ -400,5 +400,7 @@ Thanks and appreciation go to the following sources and people:
   - Heritage Housing Issues project by Farid Benachenhou [Link](https://github.com/faridjos/milestone-project-heritage-housing-issues)
 - StackOverflow helped resolve several issues through out the project.
 - As always a big thank you to my husband, Railson Gonçalves.
+
+Come and see the [Live App](https://heritage-housing-fernando-74a4ebdc845a.herokuapp.com/#heritage-housing-ames-usa)
 
 **Developed by: Fernando Gonçalves**
