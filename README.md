@@ -1,6 +1,6 @@
 # :earth_americas: **Heritage Housing Ames, USA** :house_with_garden:
  
-![Heritage Housing Ames](https://lh3.googleusercontent.com/p/AF1QipNKRtVDRmvx3OtNnix6GgYkVe6a-eD_0qM1x9dI=s1360-w1360-h1020)
+![Heritage Housing Ames](assets/images/ames-iowa-skyline-com-construções-da-cor-e-o-céu-azul-100932701.jpg)
 
 ## Table of Contents
 
@@ -386,6 +386,7 @@ Investigate alternative machine learning approaches: Exploring other machine lea
 
 - The image of main street Ames is from [Wikipedia](https://commons.wikimedia.org/wiki/File:Ames_Iowa_Main_Street_%28bannerportada_esvoy%29.jpg)
 - The images of Iowa State University was taken from [Niche.com](https://www.niche.com/colleges/iowa-state-university/)
+- The Ames images was taken from [dreamstime.com](https://pt.dreamstime.com/ames-iowa-skyline-com-as-constru%C3%A7%C3%B5es-da-cor-isoladas-em-backgro-branco-image101534629)
 
 ## Acknowledgements
 
