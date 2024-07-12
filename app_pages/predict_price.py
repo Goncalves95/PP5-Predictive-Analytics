@@ -11,7 +11,7 @@ from src.ml.evaluate_regression import (
 def page_predict_price_ml_body():
 
     # load regression pipeline files
-    vsn = 'v1'
+    vsn = 'v2'
     sale_price_pipe = load_pkl_file(
         f"outputs/ml_pipeline/predict_price/{vsn}/regression_pipeline.pkl"
     )
