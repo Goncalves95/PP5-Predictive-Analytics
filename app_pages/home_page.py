@@ -9,7 +9,7 @@ def home_page_body():
     """
 
     image_main = plt.imread(f"assets/images/ames-iowa-skyline-com-construções-coloridas-e-reflexões-isoladas-em-branco-ilustração-vetorial-194806085.jpg")
-    image_isu = plt.imread(f"assets/images/ames_university_city.jpeg")
+    image_isu = plt.imread(f"assets/images/ames_city.jpeg")
     
     st.image(image_main, caption='Ames City')
 
