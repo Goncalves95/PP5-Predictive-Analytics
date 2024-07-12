@@ -61,7 +61,7 @@ def home_page_body():
         f" file on the project's GitHub page.\n"
         f"* This project was developed by Fernando Gonçalves. For study purposes"
         f" about the developer, visit her"
-        f" [MyPortfolio](https://www.iamfernando.io).")
+        f" [MyPortfolio](https://www.iamfernando.io/).")
 
     st.image(image_isu, caption='Ames, Iowa, USA.')
 

@@ -420,4 +420,4 @@ Thanks and appreciation go to the following sources and people:
 Come and see the [Live App](https://heritage-housing-fernando-74a4ebdc845a.herokuapp.com/#heritage-housing-ames-usa)
 
 **Developed by: Fernando Gonçalves**
-[My Portfolio](www.iamfernando.io)
+[My Portfolio](https://www.iamfernando.io/)
