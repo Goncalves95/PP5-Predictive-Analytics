@@ -86,6 +86,9 @@ def predict_sale_price(x_live, sale_price_features, sale_price_pipe):
     # Re-order the columns to match the order in sale_price_features
     x_live = x_live[sale_price_features]
     
+    # Fill missing values in x_live
+    x_live = x_live.fillna(x_live.median())
+    
     # Verify the shape
     print(x_live.shape)
     
