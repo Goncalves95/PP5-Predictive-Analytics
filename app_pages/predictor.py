@@ -83,6 +83,13 @@ def generate_live_data():
 def predict_sale_price(x_live, sale_price_features, sale_price_pipe):
     print("X_live shape:", x_live.shape)
     print("sale_price_features:", sale_price_features)
+    
+    # Re-order the columns to match the order in sale_price_features
+    x_live = x_live[sale_price_features]
+    
+    # Verify the shape
+    print(x_live.shape)
+    
     if st.button("Run Predictive Analysis"):
         prediction = predict_price(x_live, sale_price_features, sale_price_pipe)
         st.write(f"* The predicted sale price is: **${prediction:.2f}**")
@@ -142,7 +149,7 @@ def draw_inputs_widgets():
     with col02:
         feature = "TotalBsmtSF"
         st_widget = st.number_input(
-            label='Total Basement SQFT',
+            label='Total Basement Square',
             min_value=int(df[feature].min()*percentageMin),
             max_value=int(df[feature].max()*percentageMax),
             value=int(df[feature].median()),
@@ -153,7 +160,7 @@ def draw_inputs_widgets():
     with col03:
         feature = "2ndFlrSF"
         st_widget = st.number_input(
-            label='2nd Floor SQFT',
+            label='2nd Floor Square',
             min_value=int(df[feature].min()*percentageMin),
             max_value=int(df[feature].max()*percentageMax),
             value=int(df[feature].median()),
@@ -164,7 +171,7 @@ def draw_inputs_widgets():
     with col04:
         feature = "GarageArea"
         st_widget = st.number_input(
-            label="Garage Area SQFT",
+            label="Garage Area Square",
             min_value=int(df[feature].min()*percentageMin),
             max_value=int(df[feature].max()*percentageMax),
             value=int(df[feature].median()),
@@ -174,6 +181,8 @@ def draw_inputs_widgets():
 
     return X_live
 
+print(X_live.columns)
+print(sale_price_features)
 
 #############      #############      #############
 #############      #############      #############
